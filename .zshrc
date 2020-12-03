@@ -16,7 +16,19 @@ export ZSH="/Users/anan/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-
+POWERLEVEL9K_MODE='nerdfont-complete'
+ZSH_THEME="powerlevel10k/powerlevel10k"
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
+#POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\ue0b4'
+POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\uE0C2'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(os_icon time)
+#POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
+#POWERLEVEL9K_SHORTEN_DELIMITER=..
+#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=$'\n'
+#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\uF460%F{073}\uF460%F{109}\uF460%f "
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -35,10 +47,10 @@ export ZSH="/Users/anan/.oh-my-zsh"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-DISABLE_UPDATE_PROMPT="true"
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=7
+# export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -50,7 +62,7 @@ export UPDATE_ZSH_DAYS=7
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -77,7 +89,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git)
+plugins=(git z zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,6 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias proxy='export all_proxy=socks5://127.0.0.1:1080'
+# export PATH="/usr/local/opt/node@12/bin:$PATH"
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
